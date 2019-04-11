@@ -34,6 +34,6 @@ Computers
 Vendors
 -------------
 VendorID (PRIMARY KEY -auto increment)
-Name (VARCHAR )
+Name (VARCHAR -20)
 Contact (VARCHAR -20)
 Phone (CHAR -12)
