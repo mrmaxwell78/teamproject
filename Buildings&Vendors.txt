@@ -6,6 +6,6 @@ CREATE table Buildings(
 	
 CREATE table Vendors(
 	VendorID INTEGER(5) auto_increment Not Null,
-	Name VARCHAR (20) Not Null,
-	Phone CHAR (12) Not Null)
+	Name VARCHAR(20) Not Null,
+	Phone CHAR(12) Not Null)
 	primary key (VendorID));
