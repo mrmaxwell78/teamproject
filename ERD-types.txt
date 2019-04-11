@@ -9,7 +9,7 @@ Buildings
 Rooms
 -------------
 -RoomID (PRIMARY KEY -auto increment)
--BuildingID  (CHILD)
+-BuildingID  (FK)
 -RoomNumber (TINYINT)
 -Capacity (TINYINT)
 
@@ -17,15 +17,23 @@ Rooms
 RoomComputers
 -------------
 -RoomID (PRIMARY KEY -auto increment)
--BuildingID (CHILD)
--ComputerID (CHILD)
+-BuildingID (FK)
+-ComputerID (FK)
 -Count (TINYINT)
 
 -------------
 Computers
 -------------
 -ComputerID (PRIMARY KEY -auto increment)
--VendorID (CHILD)
+-VendorID (FK)
 -Model (TEXT)
 -MemorySize (TEXT)
 -StorageSize (TEXT)
+
+-------------
+Vendors
+-------------
+VendorID (PRIMARY KEY -auto increment)
+Name (VARCHAR )
+Contact (VARCHAR -20)
+Phone (CHAR -12)
