@@ -1,0 +1,31 @@
+-------------
+Buildings
+-------------
+-BuildingID (PRIMARY KEY -auto increment)
+-BuildingNo (TINYINT)
+-BuildingName (CHAR-20)
+
+-------------
+Rooms
+-------------
+-RoomID (PRIMARY KEY -auto increment)
+-BuildingID  (CHILD)
+-RoomNumber (TINYINT)
+-Capacity (TINYINT)
+
+-------------
+RoomComputers
+-------------
+-RoomID (PRIMARY KEY -auto increment)
+-BuildingID (CHILD)
+-ComputerID (CHILD)
+-Count (TINYINT)
+
+-------------
+Computers
+-------------
+-ComputerID (PRIMARY KEY -auto increment)
+-VendorID (CHILD)
+-Model (TEXT)
+-MemorySize (TEXT)
+-StorageSize (TEXT)
