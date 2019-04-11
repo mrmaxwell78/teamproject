@@ -29,5 +29,3 @@ Computers
 -Model (TEXT)
 -MemorySize (TEXT)
 -StorageSize (TEXT)
-
-MM was here
