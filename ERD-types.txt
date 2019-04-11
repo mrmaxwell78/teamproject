@@ -2,7 +2,7 @@
 Buildings
 -------------
 -BuildingID (PRIMARY KEY -auto increment)
--BuildingNo (TINYINT)
+-BuildingNo (TINYINT-5)
 -BuildingName (CHAR-20)
 
 -------------
@@ -10,8 +10,8 @@ Rooms
 -------------
 -RoomID (PRIMARY KEY -auto increment)
 -BuildingID  (FK)
--RoomNumber (TINYINT)
--Capacity (TINYINT)
+-RoomNumber (TINYINT-5)
+-Capacity (TINYINT-5)
 
 -------------
 RoomComputers
@@ -19,7 +19,7 @@ RoomComputers
 -RoomID (PRIMARY KEY -auto increment)
 -BuildingID (FK)
 -ComputerID (FK)
--Count (TINYINT)
+-Count (TINYINT-5)
 
 -------------
 Computers
@@ -34,6 +34,6 @@ Computers
 Vendors
 -------------
 VendorID (PRIMARY KEY -auto increment)
-Name (VARCHAR -20)
-Contact (VARCHAR -20)
-Phone (CHAR -12)
+Name (VARCHAR-20)
+Contact (VARCHAR-20)
+Phone (CHAR-12)

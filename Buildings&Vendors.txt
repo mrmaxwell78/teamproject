@@ -1,6 +1,6 @@
 CREATE table Buildings(
 	BuidlingID INTEGER(5) auto_increment Not Null,
-	BuildingNo TINYINT Not Null,
+	BuildingNo TINYINT(5) Not Null,
 	BuildingName CHAR(20) Not Null)
 	primary key (BuidlingID));
 	
