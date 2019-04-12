@@ -20,6 +20,14 @@ CREATE table RoomComputers(
     ComputerID INTEGER(5) Not Null,
     Count INTEGER(5) auto_increment Not Null,
     foreign key(RoomID) REFERNECES Rooms(RoomID));
+					 
+CREATE table Computers(
+	ComputerID INTEGER(5) auto_increment Not Null,
+	MemorySize TEXT Not Null,
+	StorageSize TEXT Not Null,
+	primary key (ComputerID),
+	foreign key(VendorID) REFERENCES Vendors(VendorID)
+	);
 
 CREATE table Vendors(
 	VendorID INTEGER(5) auto_increment Not Null,
