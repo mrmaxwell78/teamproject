@@ -3,7 +3,7 @@ CREATE DATABASE Inventory;
 CREATE table Buildings(
 	BuidlingID INTEGER(5) auto_increment Not Null,
 	BuildingNo TINYINT(5) Not Null,
-	BuildingName CHAR(20) Not Null
+	BuildingName CHAR(20) Not Null,
 	primary key (BuidlingID));
 	
 CREATE table Rooms(
@@ -24,5 +24,5 @@ CREATE table RoomComputers(
 CREATE table Vendors(
 	VendorID INTEGER(5) auto_increment Not Null,
 	Name VARCHAR(20) Not Null,
-	Phone CHAR(12) Not Null
+	Phone CHAR(12) Not Null,
 	primary key (VendorID));
