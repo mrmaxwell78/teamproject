@@ -18,7 +18,7 @@ CREATE table RoomComputers(
     RoomID INTEGER(5) not null,
     BuildingID INTEGER(5) Not Null,
     ComputerID INTEGER(5) Not Null,
-    Count INTEGER(5) auto_increment Not Null
+    Count INTEGER(5) auto_increment Not Null,
     foreign key(RoomID) REFERNECES Rooms(RoomID));
 
 CREATE table Vendors(
