@@ -18,7 +18,7 @@ CREATE table Rooms(
       room_capacity(INT 5),
       primary key(room_id),
      building_id(INT Not Null),
-     foreign key (building_id_id)
+     foreign key (building_id) REFERENCES building(building_id)
      );
 
 CREATE table Computers(
