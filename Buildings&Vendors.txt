@@ -9,3 +9,11 @@ CREATE table Vendors(
 	Name VARCHAR(20) Not Null,
 	Phone CHAR(12) Not Null,
 	primary key (VendorID));
+	
+CREATE table Rooms(
+      room_id (int not null auto_increment),
+      room_number(INT),
+      room_capacity(INT 5),
+      primary key(room_id),
+     building_id(INT Not Null),
+     foreign key (building_id_id));
