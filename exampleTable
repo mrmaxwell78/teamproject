@@ -1,0 +1,48 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>Lab 5</title>
+	</head>
+	<body>
+		<header><h1>Time Table</h1></header>
+		<main>
+<?php
+require_once('lab5_entertainmentdb.php'); //DB connection
+
+$sql = "SELECT * FROM time";
+?>
+<table style="width: 100%; text-align: left;">
+<tr>
+	<th>Time ID</th>
+	<th>Time</th>
+	<th>Day</th>
+	<th>Price</th>
+	<th>Theater ID</th>
+	<th>Screen ID</th>
+	<th>Movie ID</th>
+	<th>Action<input type='submit' value='Add Time'></th>
+</tr>
+<?php
+try {
+  $rows = $conn->query( $sql );
+  foreach ( $rows as $row ) {
+    echo "<tr><td>" . $row["timeID"]. "</td><td>" . $row["time"] . "</td><td>" . $row["day"] . "</td><td>" . $row["price"]. "</td><td>" . $row["theaterID"] . "</td><td>" . $row["screenID"] . "</td><td>" . $row["movieID"]."</td><td><input type='submit' value='Update'><input type='submit' value='Delete'></td><tr>";
+  }
+}catch(PDOException $e){
+    echo "<br>Query Failed:" . $e->getMessage();
+}
+echo "</table>";
+$conn = null;
+?>
+		</main>
+		<footer>
+			<em>
+			<img src="img/gicon.png" alt="icon of a G" height="21px" width="21px">
+			<br>Grace Hechavarria
+			<!--mail link-->
+			<br><a href="mailto:hechg1@mail.broward.edu" class="email">hechg1@mail.broward.edu</a>
+			<br>copyright &copy; 2019
+			</em>
+		</footer>
+	</body>
+</html>
