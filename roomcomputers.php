@@ -13,6 +13,7 @@
     <th>Room ID</th>
     <th>Building ID</th>
     <th>Computer ID</th>
+    <th>Action<input type='submit' value='Add Time'></th>
   <tr>
 <?php
 try{
