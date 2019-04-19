@@ -1,31 +1,67 @@
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
 <?php
-include('InventoryConnection.php'); //DB connection
-$sql = "SELECT * FROM time";
-?>
-<table style="width: 100%; text-align: left;">
-<tr>
-	<th>Room IDr</th>
-	<th>Building ID</th>
-	<th>RoomNumber</th>
-	<th>Capacity</th>
-	<th>Action<input type='submit' value='Add Time'></th>
-</tr>
-<?php
-try {
-  $rows = $conn->query( $sql );
-  foreach ( $rows as $row ) {
-    echo "<tr><td>" . $row["RoomID"]. "</td><td>" . $row["BuildingID"] . "</td><td>" . $row["RoomNumber"] . "</td><td>" . $row["Capacity"]. "</td><td><input type='submit' value='Update'><input type='submit' value='Delete'></td><tr>";
-  }
-}catch(PDOException $e){
-    echo "<br>Query Failed:" . $e->getMessage();
+require_once 'config.php';
+require_once 'functions.php';
+displayHeader();
+try{
+    $conn = new PDO($DB, $DBUSER, $DBPASSWORD);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}catch(PDOException $e) {
+    echo "Connection failed!";
 }
-echo "</table>";
-$conn = null;
+
+function create(){
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $buildingID = $_POST['BuildingID'];
+        $RoomNumber = $_POST['RoomNumber'];
+        $Capacity = $_POST['Capacity'];
+
+        $sql = "INSERT INTO Rooms (BuildingID, RoomNumber, Capacity) 
+        VALUES ('".$buildingID."', '".$RoomNumber."', '".$Capacity."' )";
+        if($conn->query($sql)){
+            echo "<script type= 'text/javascript'>alert('New Record Inserted Successfully');</script>";
+        }
+    }
+}
+
+function update(){
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $buildingID = $_POST['BuildingID'];
+        $RoomNumber = $_POST['RoomNumber'];
+        $Capacity = $_POST['Capacity'];
+
+        $sql = "UPDATE Rooms SET RoomNumber = $RoomNumber Capacity = $Capacity WHERE RoomNumber = $RoomNumber";
+
+        if($conn->query($sql)){
+            echo "<script type= 'text/javascript'>alert('Record Updated Successfully');</script>";
+        }
+}
+
+function del(){
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $RoomNumber = $_POST['RoomNumber'];
+        
+        $sql = "DELETE FROM Rooms WHERE 'RoomNumber' = $RoomNumber";
+
+        if($conn->query($sql)){
+            echo "<script type='text/javascript'>alert('Record Deleted Successfully');</script>";
+        }
+    }
+}
+
 ?>
-</body>
-</html>
+
+<form action="" method="POST">
+<label for="BuildingID">Building</label>
+<input type="text" name="BuildingID" id="BuildingID" required><br>
+<label for="RoomNumber">Room Number</label>
+<input type="text" name="RoomNumber" id="RoomNumber" required><br>
+<label for="Capacity">Capacity</label>
+<input type="text" name="Capacity" id="Capacity" required><br>
+<button onclick="<?php create() ?>" value="Create">
+<button onclick="<?php update() ?>" value="Update">
+<button onclick="<?php del() ?>" value="Delete">
+</form>
+
+<?php
+displayPageFooter();
+?>
