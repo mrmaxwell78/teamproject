@@ -26,5 +26,6 @@ try {
 echo "</table>";
 $conn = null;
 ?>
+	<a href="index.php">BACK TO INDEX</a>
 </body>
 </html>
