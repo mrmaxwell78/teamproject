@@ -19,8 +19,9 @@ try{
         $delete = '<a href="movies.php?delete=$row["id"]">Delete</a>';
         $result = $conn->query("SELECT * FROM Room");
         while($row = $result->fetch_assoc()){
-            echo $row['Title'], $edit, $delete;
-            echo $row['Type'], $edit, $delete;
+            echo $row['BuildingID'], $edit, $delete;
+            echo $row['RoomNumber'], $edit, $delete;
+            echo $row['Capacity'], $edit, $delete;
         }
     ?>
 
