@@ -17,12 +17,14 @@ if(isset($_POST['insert'])){
 
     $sql = "INSERT INTO Rooms (BuildingID, Capacity) VALUES ('$build', '$roomNumber', $capacity";
     $conn->query($sql);
+    header('Location: rooms.php');
 }
 
 if(isset($_GET['delete'])){
     $id = $_GET['delete'];
     $sql = "DELETE FROM Rooms WHERE RoomID=$id";
     $conn->query($sql);
+    header('Location: rooms.php');
 }
 
 if(isset($_GET['edit'])){
@@ -33,6 +35,8 @@ if(isset($_GET['edit'])){
         $row = $result->fetch_array();
         $title = $row['Title'];
         $type = $row['type'];
+        
+     header('Location: rooms.php');
     
     }
 }
@@ -44,6 +48,7 @@ if(isset($_POST['update'])){
 
     $sql = "UPDATE Rooms SET BuildingID='$build', RoomNumber='$roomNumber', Capacity='$capacity' WHERE RoomID ='$id'";
     $conn->query($sql);
+    header('Location: rooms.php');
 }
 
 ?>
