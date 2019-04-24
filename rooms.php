@@ -6,7 +6,7 @@ require_once 'rprocess.php';
 displayHeader();
 
 try{
-    $conn = new PDO($DB, $DBUSER, $DBPASSWORD);
+    $conn = new PDO(DB, DBUSER, DBPASSWORD);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }catch(PDOException $e) {}
 ?>
