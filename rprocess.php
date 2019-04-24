@@ -1,7 +1,7 @@
 <?php
 require_once 'config.php';
 try{
-    $conn = new PDO($DB, $DBUSER, $DBPASSWORD);
+    $conn = new PDO(DB, DBUSER, DBPASSWORD);
 } catch(PDOException $e) {}
 
 $id=0;
