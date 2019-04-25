@@ -26,5 +26,6 @@ try{
 }
 echo "</table>";
 $conn = null;
+?>
 </body>
 </html>
