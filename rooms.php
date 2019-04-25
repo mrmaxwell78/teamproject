@@ -1,28 +1,37 @@
 <?php
-require_once 'config.php';
 require_once 'functions.php';
 require_once 'rprocess.php';
+include('InventoryConnection.php'); //DB connection
+$sql = "SELECT * FROM Rooms";
 
 displayHeader();
 
-try{
-    $conn = new PDO(DB, DBUSER, DBPASSWORD);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}catch(PDOException $e) {}
 ?>
 <nav>
     <a href="index.php">Home</a>
 </nav>
     <input type="submit" value="submit" onclick=document.location.href='roomsform.php'>
+    table style="width: 100%; text-align: left;">
+<tr>
+	<th>Room</th>
+	<th>Building</th>
+	<th>Room Number</th>
+	<th>Capacity</th>
+	<th style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;Action<input type='submit' value='Add Time' style="float: right;"></th>
+</tr>
 <?php
-        $edit = '<a href="roomsform.php?edit=$row["id"]">Edit</a>';
-        $delete = '<a href="roomsform.php?delete=$row["id"]">Delete</a>';
-        $sql = "SELECT * FROM Rooms";
-        foreach($conn->query($sql) as $row){
-            echo $row['BuildingID'] . $edit . $delete;
-            echo $row['RoomNumber'] . $edit . $delete;
-            echo $row['Capacity'] . $edit . $delete;
-        }
-
+try {
+  $rows = $conn->query( $sql );
+  foreach ( $rows as $row ) {
+    echo "<tr><td>" . $row["RoomID"]. "</td><td>" . $row["BuildingID"]. "</td><td>" . $row["Room Number"] . "</td><td>" . $row["Capacity"] . "</td><td><input type='submit' value='Update' onclick=document.location.href='roomsform.php'>> <input type='submit' value='Delete' onclick=document.location.href='roomsform.php'>></td></tr>";
+  }
+}catch(PDOException $e){
+    echo "<br>Query Failed:" . $e->getMessage();
+}
+echo "</ul>";
+$conn = null;
+?>
+</table>
+<?php
 displayPageFooter();
 ?>
