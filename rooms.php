@@ -14,7 +14,7 @@ try{
     <a href="index.php">Home</a>
 </nav>
     <input type="submit" value="submit" onclick=document.location.href='roomsform.php'>
-    <?php
+<?php
         $edit = '<a href="roomsform.php?edit=$row["id"]">Edit</a>';
         $delete = '<a href="roomsform.php?delete=$row["id"]">Delete</a>';
         $sql = "SELECT * FROM Rooms";
@@ -23,10 +23,6 @@ try{
             echo $row['RoomNumber'] . $edit . $delete;
             echo $row['Capacity'] . $edit . $delete;
         }
-    ?>
 
-
-
-<?php
 displayPageFooter();
 ?>
