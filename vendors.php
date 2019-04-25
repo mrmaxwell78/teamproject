@@ -3,27 +3,28 @@
 <head>
 </head>
 <body>
+<h1>Vendors Table</h1>
 <?php
 include('InventoryConnection.php');
-$sql = "SELECT * FROM time";
+$sql = "SELECT * FROM vendors";
 ?>
 <table style="width: 100%; text-align: left;">
 <tr>
-	<th>Inventory ID</th>
+	<th>Vendor ID</th>
 	<th>Name</th>
 	<th>Phone</th>
-	<th>Action<input type='submit' value='Add Time'></th>
+	<th style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;Action<input type='submit' value='Add Vendor' style="float: right;"></th>
 </tr>
 <?php
 try {
   $rows = $conn->query( $sql );
   foreach ( $rows as $row ) {
-    echo "<tr><td>" . $row["VendorID"]. "</td><td>" . $row["Name"] . "</td><td>" . $row["Phone"] . "</td><td><input type='submit' value='Update'><input type='submit' value='Delete'></td><tr>";
+    echo "<tr><td>" . $row["vendorID"]. "</td><td>" . $row["name"] . "</td><td>" . $row["phone"] . "</td><td><input type='submit' value='Update'> <input type='submit' value='Delete'></td></tr>";
   }
 }catch(PDOException $e){
     echo "<br>Query Failed:" . $e->getMessage();
 }
-echo "</table>";
+echo "</ul>";
 $conn = null;
 ?>
 	<a href="index.php">BACK TO INDEX</a>
