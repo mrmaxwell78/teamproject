@@ -17,15 +17,15 @@ try{
 <?php
         $edit = '<a href="movies.php?edit=$row["id"]">Edit</a>';
         $delete = '<a href="movies.php?delete=$row["id"]">Delete</a>';
-        $result = $conn->query("SELECT * FROM Room");
-        while($row = $result->fetch_assoc()){
-            echo $row['BuildingID'], $edit, $delete;
-            echo $row['RoomNumber'], $edit, $delete;
-            echo $row['Capacity'], $edit, $delete;
+        $sql = "SELECT * FROM Rooms";
+        foreach($conn->query($sql) as $row){
+            echo $row['BuildingID'] . $edit . $delete;
+            echo $row['RoomNumber'] . $edit . $delete;
+            echo $row['Capacity'] . $edit . $delete;
         }
     ?>
 
-<form action="" method="POST">
+<form action="rprocess.php" method="POST">
 <label for="BuildingID">Building</label>
 <input type="text" name="BuildingID" id="BuildingID" value="<?php echo $build ?>" required><br>
 <label for="RoomNumber">Room Number</label>
