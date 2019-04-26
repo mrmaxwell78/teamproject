@@ -1,25 +1,28 @@
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
-<h1>Buildings Table</h1>
 <?php
-include('InventoryConnection.php');
-$sql = "SELECT * FROM buildings";
+require_once 'functions.php';
+require_once 'rprocess.php';
+include('InventoryConnection.php'); //DB connection
+$sql = "SELECT * FROM Buildings";
+
+displayHeader();
+
 ?>
-<table style="width: 100%; text-align: left;">
+<nav>
+    <a href="index.php">Home</a>
+</nav>
+    <input type="submit" value="submit" onclick=document.location.href='buildingform.php'>
+    table style="width: 100%; text-align: left;">
 <tr>
-	<th>building ID</th>
-	<th>building Number</th>
-	<th>building name</th>
-	<th style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;Action<input type='submit' value='Add Computer' style="float: right;"></th>
+	<th>Building ID</th>
+	<th>Building Number</th>
+	<th>Building Name</th>
+	<th style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;Action<input type='submit' value='Add Time' style="float: right;"></th>
 </tr>
 <?php
 try {
   $rows = $conn->query( $sql );
   foreach ( $rows as $row ) {
-    echo "<tr><td>" . $row["BuildingID"]. "</td><td>" . $row["BuildingNo"] . "</td><td>" . $row["BuildingName"] ."</td><td><input type='submit' value='Update'> <input type='submit' value='Delete'></td></tr>";
+    echo "<tr><td>" . $row["BuildingID"]. "</td><td>" . $row["BuildingNo"]. "</td><td>" . $row["BuildingName"] . "</td><td>" . "<input type='submit' value='Update' onclick=document.location.href='roomsform.php'>> <input type='submit' value='Delete' onclick=document.location.href='roomsform.php'>></td></tr>";
   }
 }catch(PDOException $e){
     echo "<br>Query Failed:" . $e->getMessage();
@@ -27,5 +30,7 @@ try {
 echo "</ul>";
 $conn = null;
 ?>
-</body>
-</html>
+</table>
+<?php
+displayPageFooter();
+?>
