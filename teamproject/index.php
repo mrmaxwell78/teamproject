@@ -110,6 +110,7 @@
 			<a href="roomcomputers.php">ROOM COMPUTERS</a>
 			<a href="computers.php">COMPUTERS</a>
 			<a href="vendors.php">VENDORS</a>
+			<a href="reports.php">REPORTS</a>
 		</nav>
 		</div>
 		<header><h1>INVENTORY DATABASE</h1></header>
