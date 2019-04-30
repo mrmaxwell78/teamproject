@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Team Project One</title>
@@ -123,14 +123,14 @@
 					<li><a href="rooms.php">Rooms</a></li>
 					<li><a href="roomcomputers.php">Room Computers</a></li>
 					<li><a href="computers.php">Computers</a></li>
-					<li><a href="vendors.php">Venors</a>></li>
+					<li><a href="vendors.php">Venors</a></li>
 					<li><a href="reports.php">Reports</a></li>
 				</ul>
 			</div>
 		</main>
 		<footer>
 			<em>
-			<img src="img/group-icon2.png" alt="group icon" height="3%" width="3%">
+			<img src="img/group-icon2.png" alt="group icon" height="5%" width="3%">
 			<br>Darly Dubreus, Grace Hechavarria, Mathew Maxwell, 
 			<br>Manuel Pena, Gregory Toussaint
 			<br>copyright &copy; 2019
