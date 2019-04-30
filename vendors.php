@@ -1,3 +1,7 @@
+<?php
+include('InventoryConnection.php');
+$sql = "SELECT * FROM vendors";
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,15 +15,9 @@
 		<a href="index.php">HOME</a><a href="buildings.php">BUILDINGS</a><a href="rooms.php">ROOMS</a><a href="roomcomputers.php">ROOM COMPUTERS</a><a href="computers.php">COMPUTERS</a><a href="vendors.php" id="selectedpage">VENDORS</a>
 		</nav>
 		</div>
-		<header><h1>Rooms Table</h1></header>
+		<header><h1>Vendors Table</h1></header>
 		<main>
-
-<div id="mainContent">
-<h1>Vendors Table</h1>
-<?php
-include('InventoryConnection.php');
-$sql = "SELECT * FROM vendors";
-?>
+		
 <div class="tableOverflow">
 <table style="width: 100%; text-align: left;">
 <tr>
@@ -46,7 +44,7 @@ $conn = null;
 		</main>
 		<footer>
 			<em>
-			<img src="img/group-icon2.png" alt="group icon" height="3%" width="3%">
+			<img src="img/group-icon2.png" alt="group icon" height="5%" width="3%">
 			<br>Darly Dubreus, Grace Hechavarria, Mathew Maxwell, 
 			<br>Manuel Pena, Gregory Toussaint
 			<br>copyright &copy; 2019
