@@ -12,19 +12,14 @@
     </form>
     <?php if(isset($_POST['srchbtn'])){//Something along the lines of this to search the db
         $key = $_POST['keyword'];
-        $sql = "SELECT * FROM Buildings WHERE BuildingID LIKE $key";
-        $result1 = $conn->query($sql);
-        $sql1 = "SELECT RoomNumber, Capacity FROM Rooms WHERE BuildingID LIKE $key";
-        $result2 = $conn->query($sql1);
-        $sql2 = "SELECT ComputerID, Count FROM RoompComputers WHERE BuildingID LIKE $key";
-        $result3 = $conn->query($sql2);
-        $sql3 = "SELECT VendorID, Model, MemorySize, StorageSize FROM Computers WHERE RoomID = RoomID(RoomComputers)";
-        $result4 = $conn->query($sql3);
+        $sql = "SELECT b.BuildingID, b.BuildingNo, b.BuildingName, r.RoomID, r.RoomNumber, r.Capacity, r.Count, c.Vendor, c.Model, c.MemorySize, c.StorageSize
+	FROM Buildings b, Rooms r, Computers c
+	WHERE b.BuildingID = '$key'";
         
-        $result = array($result1, $result2, $result3, $result4);
+        $result = $conn-query($sql);
 
         if($result >= 1){
-           print_r($results);
+           echo $results;
             }
         }
     ?>
