@@ -22,13 +22,13 @@ include('InventoryConnection.php');
 Computer form
 </legend>
 <label for="VendorID">Vendor</label>
-<input type="text" name="VendorID" id="VendorID" value="<?php echo $vendor ?>" required><br>
+<input type="text" name="VendorID" id="VendorID" value="<?php echo $vendor ?>" required><br><br>
 <label for="Model">Model</label>
-<input type="text" name="Model" id="Model" value="<?php echo $model ?>" required><br>
+<input type="text" name="Model" id="Model" value="<?php echo $model ?>" required><br><br>
 <label for="MemorySize">Memory Size</label>
-<input type="text" name="MemorySize" id="MemorySize" value="<?php echo $memory ?>" required><br>
+<input type="text" name="MemorySize" id="MemorySize" value="<?php echo $memory ?>" required><br><br>
 <label for="StorageSize">Storage Size</label>
-<input type="text" name="StorageSize" id="StorageSize" value="<?php echo $storage ?>" required><br>
+<input type="text" name="StorageSize" id="StorageSize" value="<?php echo $storage ?>" required><br><br>
 <?php
     if($update == true){
        echo '<button type="submit" name="update">Update</button>';
