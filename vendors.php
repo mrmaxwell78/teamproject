@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Team Project One</title>
+	<link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
+	<link href="tableCSS.css" rel="stylesheet">
 </head>
 <body>
+<div id="navbar">
+		<nav>
+		<a href="index.php">HOME</a><a href="buildings.php">BUILDINGS</a><a href="rooms.php">ROOMS</a><a href="roomcomputers.php">ROOM COMPUTERS</a><a href="computers.php">COMPUTERS</a><a href="vendors.php" id="selectedpage">VENDORS</a>
+		</nav>
+		</div>
+		<header><h1>Rooms Table</h1></header>
+		<main>
+
+<div id="mainContent">
 <h1>Vendors Table</h1>
 <?php
 include('InventoryConnection.php');
 $sql = "SELECT * FROM vendors";
 ?>
+<div class="tableOverflow">
 <table style="width: 100%; text-align: left;">
 <tr>
 	<th>Vendor ID</th>
@@ -27,6 +40,17 @@ try {
 echo "</ul>";
 $conn = null;
 ?>
-	<a href="index.php">BACK TO INDEX</a>
+</table>
+</div>
+</div>
+		</main>
+		<footer>
+			<em>
+			<img src="img/group-icon2.png" alt="group icon" height="3%" width="3%">
+			<br>Darly Dubreus, Grace Hechavarria, Mathew Maxwell, 
+			<br>Manuel Pena, Gregory Toussaint
+			<br>copyright &copy; 2019
+			</em>
+		</footer>
 </body>
 </html>
