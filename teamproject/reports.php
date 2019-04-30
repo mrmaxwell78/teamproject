@@ -5,8 +5,6 @@ Create a web page called *report.php* linked from the index.php web page that us
 -	Building ID, Number and Name
 -	Room ID, Number and Capacity
 -	For each room in a building, display the Vendor Name, Computer Model, MemorySize, StorageSize and Count. Take into consideration that a room can have different computer models from multiple vendors.
-
-(just saw that Gregory had indeed uploaded this page already!)
 */
 <!DOCTYPE html>
 <html>
