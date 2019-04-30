@@ -25,6 +25,7 @@ if(isset($_GET['edit'])){
     $id = $_GET['edit'];
     $select = "SELECT FROM Buildings WHERE BuildingID = $id";
     $result = $conn->query($select);
+    $update = true;
     if(count($result)==1){
         $row = $result->fetch_array();
         $buildnumber = $row['BuildingNo'];
