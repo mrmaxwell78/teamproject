@@ -41,7 +41,7 @@ try {
 echo "</ul>";
 $conn = null;
 ?>
-/table>
+</table>
 </div>
 </div>
 		</main>
