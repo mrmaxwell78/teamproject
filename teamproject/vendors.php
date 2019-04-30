@@ -12,7 +12,7 @@ $sql = "SELECT * FROM vendors";
 <body>
 <div id="navbar">
 		<nav>
-		<a href="index.php">HOME</a><a href="buildings.php">BUILDINGS</a><a href="rooms.php" id="selectedpage">ROOMS</a><a href="roomcomputers.php">ROOM COMPUTERS</a><a href="computers.php">COMPUTERS</a><a href="vendors.php">VENDORS</a>
+		<a href="index.php">HOME</a><a href="buildings.php">BUILDINGS</a><a href="rooms.php">ROOMS</a><a href="roomcomputers.php">ROOM COMPUTERS</a><a href="computers.php">COMPUTERS</a><a href="vendors.php" id="selectedpage">VENDORS</a>
 		</nav>
 		</div>
 		<header><h1>Rooms Table</h1></header>
