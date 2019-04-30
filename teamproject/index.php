@@ -119,10 +119,12 @@
 			<div id="mainContent">
 			<h2>Please pick a table name</h2>
 				<ul>
-					<li><a href="lab5_theater.php" class="select">Theater</a></li>
-					<li><a href="lab5_screen.php" class="select">Screen</a></li>
-					<li><a href="lab5_movie.php" class="select">Movie</a></li>
-					<li><a href="lab5_time.php" class="select">Time</a></li>
+					<li><a href="buildings.php">Buildings</a></li>
+					<li><a href="rooms.php">Rooms</a></li>
+					<li><a href="roomcomputers.php">Room Computers</a></li>
+					<li><a href="computers.php">Computers</a></li>
+					<li><a href="vendors.php">Venors</a>></li>
+					<li><a href="reports.php">Reports</a></li>
 				</ul>
 			</div>
 		</main>
