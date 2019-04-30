@@ -30,6 +30,7 @@ if(isset($_GET['delete'])){
 if(isset($_GET['edit'])){
     $id = $_GET['edit'];
     $select = "SELECT FROM Computers WHERE VendorID = $id";
+    $update = true;
     $result = $conn->query($select);
     if(count($result)==1){
         $row = $result->fetch_array();
