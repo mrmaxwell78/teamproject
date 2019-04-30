@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
 <head>
 	<title>Team Project One</title>
@@ -104,31 +104,35 @@
 <body>
 		<div id="navbar">
 		<nav>
+			<a href="index.php">HOME</a>
 			<a href="buildings.php">BUILDINGS</a>
 			<a href="rooms.php">ROOMS</a>
 			<a href="roomcomputers.php">ROOM COMPUTERS</a>
 			<a href="computers.php">COMPUTERS</a>
 			<a href="vendors.php">VENDORS</a>
+			<a href="reports.php">REPORTS</a>
 		</nav>
 		</div>
 		<header><h1>INVENTORY DATABASE</h1></header>
 		<main>
+			<img src="img/bluearrow.png" style="float: right; position: absolute; right: 0px; center: 0px; z-index: 0; padding-right: 0%;" width="75%" height="55%">
 			<div id="mainContent">
 			<h2>Please pick a table name</h2>
 				<ul>
-					<li><a href="lab5_theater.php" class="select">Theater</a></li>
-					<li><a href="lab5_screen.php" class="select">Screen</a></li>
-					<li><a href="lab5_movie.php" class="select">Movie</a></li>
-					<li><a href="lab5_time.php" class="select">Time</a></li>
+					<li><a href="buildings.php">Buildings</a></li>
+					<li><a href="rooms.php">Rooms</a></li>
+					<li><a href="roomcomputers.php">Room Computers</a></li>
+					<li><a href="computers.php">Computers</a></li>
+					<li><a href="vendors.php">Venors</a>></li>
+					<li><a href="reports.php">Reports</a></li>
 				</ul>
 			</div>
 		</main>
 		<footer>
 			<em>
-			<img src="" alt="group icon" height="21px" width="21px">
+			<img src="img/group-icon2.png" alt="group icon" height="3%" width="3%">
 			<br>Darly Dubreus, Grace Hechavarria, Mathew Maxwell, 
 			<br>Manuel Pena, Gregory Toussaint
-			<!--mail link-->
 			<br>copyright &copy; 2019
 			</em>
 		</footer>
