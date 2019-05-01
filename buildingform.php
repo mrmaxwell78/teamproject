@@ -12,23 +12,20 @@ body {
 </head>
 <body>
 <?php
-require_once 'rooms.php';
-require_once 'rprocess.php';
-
+require_once 'buildings.php';
+require_once 'bprocess.php';
 ?>
-
 <div id="form"></div>
-<form action="rprocess.php" method="POST">
+<form action="bprocess.php" method="POST">
 <fieldset>
 <legend> 
-Rooms form
+Building form
 </legend>
-<label for="BuildingID">Building</label>
-<input type="text" name="BuildingID" id="BuildingID" value="<?php echo $build ?>" required><br>
-<label for="RoomNumber">Room Number</label>
-<input type="text" name="RoomNumber" id="RoomNumber" value="<?php echo $roomNumner ?>" required><br>
-<label for="Capacity">Capacity</label>
-<input type="text" name="Capacity" id="Capacity" value="<?php echo $capacity ?>" required><br>
+<label for="BuildingNo">Building Number</label>
+<input type="text" name="BuildingNo" id="BuildingNo" value="<?php echo $buildnumber ?>" required><br>
+<label for="BuildingName">Room Number</label>
+<input type="text" name="BuildingName" id="BuildingName" value="<?php echo $buildingname ?>" required><br>
+
 <?php
     if($update == true){
        echo '<button type="submit" name="update">Update</button>';
@@ -38,8 +35,8 @@ Rooms form
 ?>
 </fieldset>
 </form>
-   <div id="footer"></div>
-     <footer>
+<div id="footer"></div>
+<footer>
 			<em>
 			<img src="img/group-icon2.png" alt="group icon" height="3%" width="3%">
 			<br>Darly Dubreus, Grace Hechavarria, Mathew Maxwell, 
@@ -47,5 +44,6 @@ Rooms form
 			<br>copyright &copy; 2019
 			</em>
 		</footer>
+
 </body>
 </html>
