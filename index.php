@@ -104,7 +104,7 @@
 <body>
 		<div id="navbar">
 		<nav>
-			<a href="index.php">HOME</a>
+			<a href="index.php" id="selectedpage">HOME</a>
 			<a href="buildings.php">BUILDINGS</a>
 			<a href="rooms.php">ROOMS</a>
 			<a href="roomcomputers.php">ROOM COMPUTERS</a>
