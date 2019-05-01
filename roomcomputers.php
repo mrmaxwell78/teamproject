@@ -27,7 +27,7 @@
 	<th>Room ID</th>
 	<th>Building ID</th>
 	<th>Computer ID</th>
-	<th style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;Action<input type='submit' value='Add Time' style="float: right;"></th>
+	<th style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;Action<input type='submit' value='Add Room Computers' style="float: right;"></th>
 </tr>
 <?php
 try {
