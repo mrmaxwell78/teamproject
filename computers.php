@@ -26,8 +26,8 @@ $sql = 'SELECT * FROM Computers';
 <div class="tableOverflow">
     <table style="width:100%; text-align:left;">
   <tr>
-    <th>Vendor</th>
-    <th>Model</th>
+    <th>Computer ID</th>
+    <th>Vendor ID</th>
     <th>Memory Size</th>
     <th>Storage Size</th>
     <th>Action<input type="submit" value="submit" onclick=document.location.href='computersform.php'></th>
@@ -36,7 +36,7 @@ $sql = 'SELECT * FROM Computers';
 try{
   $rows = $conn->query($sql);
   foreach($rows as $row){
-    echo "<tr><td>" . $row["VendorID"]."</td><td>" . "</td><td>" . $row["Model"] . "</td><td>" . $row["MemorySize"] . "</td><td>" . $row["StorageSize"]. "</td><td><input type='submit' value='Update' onclick=document.location.href='computersform.php><input type='submit' value='Delete' onclick=document.location.href='computersform.php></td><tr>";
+    echo "<tr><td>" . $row["ComputerID"]."</td><td>" . "</td><td>" . $row["VendorID"] . "</td><td>" . $row["MemorySize"] . "</td><td>" . $row["StorageSize"]. "</td><td><input type='submit' value='Update' onclick=document.location.href='computersform.php><input type='submit' value='Delete' onclick=document.location.href='computersform.php></td><tr>";
   }
 }catch(PDOException $e){
     echo "<br>Query Failed:" . $e->getMessage();
