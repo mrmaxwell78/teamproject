@@ -1,0 +1,35 @@
+label{
+	
+	display:inline-block;
+	margin-right:5px;
+	width:200px;
+}
+
+form{
+	padding:35px;
+	font-family:"arial","Arial Narrow";
+	margin-right:100%;
+	width:300px;	
+}
+fieldset{
+background-color:rgba(108, 210, 247,0.4);
+font-size:20px;
+width:560px;
+color: white;
+}
+legend{
+	background:black;	
+}
+
+#footer {
+   margin-bottom: 20%;
+}
+footer{
+	text-align:center;
+	clear:both;
+	color:white;
+	font-size:20px;
+	 
+}
+
+	
