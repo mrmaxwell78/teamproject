@@ -17,7 +17,7 @@ $sql = "SELECT * FROM vendors";
 		</div>
 		<header><h1>Vendors Table</h1></header>
 		<main>
-		
+<div id="mainContent">
 <div class="tableOverflow">
 <table style="width: 100%; text-align: left;">
 <tr>
