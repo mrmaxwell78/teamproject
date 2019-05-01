@@ -33,7 +33,7 @@ displayHeader();
 	<th>Building ID</th>
 	<th>Building Number</th>
 	<th>Building Name</th>
-	<th style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;Action<input type='submit' value='Add Time' style="float: right;"></th>
+	<th style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;Action<input type='submit' value='Add Building' style="float: right;"></th>
 </tr>
 <?php
 try {
