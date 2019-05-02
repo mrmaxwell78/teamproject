@@ -15,6 +15,7 @@
 	<main>
 <div id="mainContent">
 <form action="" method=POST>
+    <div style="color: white;">Insert Building ID: </div>
     <!-- This is to create something to search the database-->
     <input type="search" name="keyword" placeholder="Search">
     <input type="submit" name="srchbtn" value="Search">
