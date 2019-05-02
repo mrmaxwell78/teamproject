@@ -3,7 +3,8 @@ require_once 'functions.php';
 require_once 'rprocess.php';
 include('InventoryConnection.php'); //DB connection
 $sql = "SELECT * FROM Rooms";
-
+$edit = '<a href="roomsform.php?edit=$row["id"]">Edit</a>';
+        $delete = '<a href="roomsform.php?delete=$row["id"]">Delete</a>'
 displayHeader();
 
 ?>
@@ -39,7 +40,7 @@ displayHeader();
 try {
   $rows = $conn->query( $sql );
   foreach ( $rows as $row ) {
-    echo "<tr><td>" . $row["RoomID"]. "</td><td>" . $row["BuildingID"]. "</td><td>" . $row["Room Number"] . "</td><td>" . $row["Capacity"] . "</td><td><input type='submit' value='Update' onclick=document.location.href='roomsform.php'>> <input type='submit' value='Delete' onclick=document.location.href='roomsform.php'>></td></tr>";
+    echo "<tr><td>" . $row["RoomID"]. "</td><td>" . $row["BuildingID"]. "</td><td>" . $row["Room Number"] . "</td><td>" . $row["Capacity"] . "</td><td>$edit, $delete</td></tr>";
   }
 }catch(PDOException $e){
     echo "<br>Query Failed:" . $e->getMessage();
