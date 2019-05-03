@@ -5,7 +5,6 @@ include('InventoryConnection.php'); //DB connection
 $sql = "SELECT * FROM Rooms";
 $edit = '<a href="roomsform.php?edit=$row["id"]">Edit</a>';
         $delete = '<a href="roomsform.php?delete=$row["id"]">Delete</a>'
-displayHeader();
 
 ?>
 <!DOCTYPE html>
