@@ -6,8 +6,6 @@ $sql = "SELECT * FROM Buildings";
 $edit = '<a href="buildingsform.php?edit=$row["id"]">Edit</a>';
 $delete = '<a href="buildingsform.php?delete=$row["id"]">Delete</a>'
 
-displayHeader();
-
 ?>
 <!DOCTYPE html>
 <html>
